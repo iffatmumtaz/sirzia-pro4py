@@ -31,7 +31,7 @@ menu = ["Add Book", "View Books", "Search Book", "Delete Book"]
 choice = st.sidebar.selectbox("Menu", menu)
 
 # Add Book
-if choice == "📕 Add Book":
+if choice == "Add Book":
     st.subheader("Add New Book")
     book_name = st.text_input("Book Name")
     author = st.text_input("Author")
