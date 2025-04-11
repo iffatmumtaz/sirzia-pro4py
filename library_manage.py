@@ -31,7 +31,7 @@ menu = ["Add Book", "View Books", "Search Book", "Delete Book"]
 choice = st.sidebar.selectbox("Menu", menu)
 
 # Add Book
-if choice == "📕 Add Book":
+if choice == "Add Book":
     st.subheader("Add New Book")
     book_name = st.text_input("Book Name")
     author = st.text_input("Author")
@@ -42,7 +42,7 @@ if choice == "📕 Add Book":
         st.success(f"'{book_name}' added to library!")
 
 # View Books
-elif choice == "📖  View Books":
+elif choice == "View Books":
     st.subheader("All Books")
     if st.session_state.books:
         df = pd.DataFrame(st.session_state.books)
@@ -51,7 +51,7 @@ elif choice == "📖  View Books":
         st.info("No books available yet.")
 
 # Search Book
-elif choice == "🔎 Search Book":
+elif choice == "Search Book":
     st.subheader("Search Book")
     search_term = st.text_input("Enter book name or author")
     if st.button("Search"):
@@ -62,7 +62,7 @@ elif choice == "🔎 Search Book":
             st.warning("No matching books found.")
 
 # Delete Book
-elif choice == "🗑️ Delete Book":
+elif choice == "Delete Book":
     st.subheader("Delete Book")
     if st.session_state.books:
         book_titles = [book["Book"] for book in st.session_state.books]
